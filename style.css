@@ -419,6 +419,83 @@ h3{
     z-index: 2;
 }
 
+/* ----- Design BOX ----- */
+
+.project-design{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-design1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.project-design1>i{
+    font-size: 50px;
+    color: #00B5E7;
+    margin-bottom: 25px;
+}
+.project-design1 label{
+    font-size: 15px;
+    color: #777;
+}
+.project-design1::after, .contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: var(--second-color);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+/* .project-design1:hover.project-design1::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+} */
+.project-design1:hover.project-design1 i,
+.project-design1:hover.project-design1>h3,
+.project-design1:hover.project-design1>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+.aa{
+    height: 110%;
+    width: 135%;
+}
+.virataus{
+    height: 110%;
+    width: 95%;
+    margin-top: 10%;
+}
+.virat{
+    height: 110%;
+    width: 50%;
+}
+.tug{
+    height: 110%;
+    width: 98%;
+}
+.icard{
+    height: 105%;
+    width: 100%;
+}
+.A1{
+    height: 105%;
+    width: 112%;
+}
+
 /* ----- CONTACT BOX ----- */
 .contact-info{
     position: relative;
@@ -629,6 +706,10 @@ footer{
     .project-box{
         width: 80%;
     }
+    .project-design1{
+        justify-content: center;
+        width: 100%;
+    }
 
 }
 
@@ -646,5 +727,8 @@ footer{
     }
     .input-field{
         width: 100%;
+    }
+    .project-design1{
+        width: 80%;
     }
 }
